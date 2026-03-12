@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #000000; /* Protège l'encoche et le bounce effect */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Pas besoin de auto ici, margin 0 suffit */
+    padding: 0;
+}
+
+/* --- RESET GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- LE CORPS DE LA PAGE --- */
+.artist-body {
+    background-color: #050505; /* Un noir très profond, comme sur ta maquette */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100svh; /* Pour gérer Safari iPhone */
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-main {
+    /* Padding qui gère la Safe Area de l'iPhone (l'encoche en haut et la barre en bas) */
+    padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom)) 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Permet à la page de prendre toute la hauteur */
+}
+
+/* --- 1. BOUTON RETOUR --- */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.back-btn img {
+    width: 24px; /* Taille de la flèche */
+    height: auto;
+}
+
+/* --- 2. IMAGE ET EFFET DE FONDU (LA MAGIE !) --- */
+.image-wrapper {
+    position: relative; /* Indispensable pour que le dégradé se place par-dessus */
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden; /* Coupe ce qui dépasse des bords arrondis */
+    margin-bottom: 30px;
+}
+
+#artist-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Le dégradé noir par-dessus l'image */
+.fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* Le dégradé remonte sur 60% de l'image */
+    /* On passe du transparent (en haut) au même noir que le fond (en bas) */
+    background: linear-gradient(to bottom, rgba(5,5,5,0) 0%, rgba(5,5,5,1) 100%);
+}
+
+/* --- 3. INFOS ARTISTE --- */
+.artist-info {
+    margin-bottom: 40px;
+}
+
+#artist-name {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+#artist-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #cccccc; /* Un gris très clair pour reposer la lecture */
+}
+
+/* --- 4. RÉSEAUX SOCIAUX --- */
+.artist-socials h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a img {
+    width: 45px;
+    height: 45px;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:active img {
+    transform: scale(0.9); /* Petit effet d'appui sur le bouton */
+}
+
+/* --- 5. LOGO FILIGRANE --- */
+.watermark-logo {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    margin-top: auto; /* L'astuce Flexbox : pousse le logo tout en bas de l'écran ! */
+    pointer-events: none; /* Empêche de cliquer dessus accidentellement */
+}
