@@ -196,7 +196,7 @@ h5 {
 
 /* 2. C'est maintenant le LIEN <a> qui gère la taille et le magnétisme du carrousel */
 .artist-img a {
-    flex: 0 0 35%; /* Chaque lien prend 35% de la largeur */
+    flex: 0 0 50%; /* Chaque lien prend 35% de la largeur */
     scroll-snap-align: center; 
     display: block; /* Indispensable pour un lien qui contient une image */
     text-decoration: none; /* Enlève le style par défaut des liens */
