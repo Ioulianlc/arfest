@@ -14,7 +14,8 @@ body {
     justify-content: center; /* Centrer verticalement */
     align-items: center;    /* Centrer horizontalement */
     text-align: center;
-    min-height: 100vh;      /* Prendre toute la hauteur de l'écran pour cet effet */
+    min-height: 100vh;  /* On garde ça en "Fallback" (sécurité) pour les très vieux navigateurs */
+    min-height: 100svh; /* Pour les mobiles modernes : s'arrête pile au-dessus de la barre Safari ! */
     color: #ffffff;         /* Texte blanc par défaut */
     box-sizing: border-box;
     padding: 20px;
