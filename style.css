@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #0E296b; /* La couleur la plus foncée de ton fond */
+}
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
