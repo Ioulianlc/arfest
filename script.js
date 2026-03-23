@@ -20,6 +20,27 @@ const baseArtistes = {
         description: "Du rock pur jus qui va vous faire sauter partout. Préparez vos meilleures cordes vocales.",
         insta: "https://instagram.com/rushavenue",
         spotify: "https://spotify.com/"
+    },
+    "wally": {
+        nom: "Wally Stryx",
+        image: "img/lineUp/wallyStryx.png",
+        description: "Du rock pur jus qui va vous faire sauter partout. Préparez vos meilleures cordes vocales.",
+        insta: "https://instagram.com/rushavenue",
+        spotify: "https://spotify.com/"
+    },
+    "planb": {
+        nom: "Plan B",
+        image: "img/lineUp/PlanB.png",
+        description: "Du rock pur jus qui va vous faire sauter partout. Préparez vos meilleures cordes vocales.",
+        insta: "https://instagram.com/rushavenue",
+        spotify: "https://spotify.com/"
+    },
+    "ipo": {
+        nom: "IPO",
+        image: "img/lineUp/ipo.png",
+        description: "Du rock pur jus qui va vous faire sauter partout. Préparez vos meilleures cordes vocales.",
+        insta: "https://instagram.com/rushavenue",
+        spotify: "https://spotify.com/"
     }
     // Ajoute la suite de tes artistes ici avec la même structure !
 };
